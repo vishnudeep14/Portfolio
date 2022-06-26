@@ -1,0 +1,140 @@
+@import "../../global.scss";
+
+
+.intro {
+  background-image:url("https://i.pinimg.com/474x/ef/b2/d2/efb2d22bba4bea5defdf5e71318b9a52.jpg");
+  display: flex;
+
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+
+    .imgContainer {
+     
+      align-items: center;
+      justify-content: center;
+      //float: left;
+      border-radius:120%;
+      width: 500px;
+      height: 500px;
+      display: flex;
+      overflow: hidden;
+      //background-blend-mode: lighten;
+      @include mobile{
+        align-items: flex-start;
+      }
+
+      img {
+        height: 110%;
+
+        @include mobile{
+          height: 50%;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+    position: relative;
+
+    .wrapper {
+      width: 85%;
+      height: 85%;
+      padding-left: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: azure;
+      font-size: smaller;
+      font-style: italic;
+
+      @include mobile{
+        padding-left: 0;
+        align-items: center;
+      }
+
+      h1 {
+      
+        font-family: 'ariel',serif;
+        
+        font-weight: bold;
+        background-image: linear-gradient(
+       to left,
+       #462523 0,
+       	#cb9b51 22%, 
+	#f6e27a 100%,
+	#f6f2c0 30%,
+	#f6e27a 55%,
+	#cb9b51 88%,
+	#462523 100%
+       );
+        color:transparent;
+        -webkit-background-clip:text;
+      
+
+        font-size: 60px;
+        margin: 10px 0;
+
+        @include mobile{
+          font-size: 40px;
+        }
+      }
+      h2 {
+        font-size: 35px;
+        color: whitesmoke;
+      }
+      h3 {
+        font-size: 30px;
+        color: whitesmoke;
+
+        @include mobile{
+          font-size: 20px;
+        }
+
+        span {
+          font-size: inherit;
+          color: crimson;
+        }
+
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 40%;
+
+      img {
+        width: 30px;
+        animation: arrowBlink 2s infinite;
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+//https://i.pinimg.com/474x/ef/b2/d2/efb2d22bba4bea5defdf5e71318b9a52.jpg
